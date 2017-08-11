@@ -1,0 +1,36 @@
+.jumbotron{
+    
+    background: #20B2AA;
+    color: #fff;
+   
+}
+
+h3{
+    margin:0px;
+    padding: 0px;
+    color: #20B2AA;
+}
+
+.fot-mar{
+    margin-top:60px;
+}
+.v-line{
+    border-left: 1px solid #20B2AA;
+}
+.base-color{
+    color:#20B2AA;
+}
+.btn-base-color{
+    background-color: #20B2AA;
+    border-color:#20B2AA;
+    
+}
+
+hr{
+     border-color:#20B2AA;
+     
+}
+
+.m-top-5{
+margin-top: 5px;
+}
