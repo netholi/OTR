@@ -16,17 +16,17 @@
                         <img src="" alt="Post image">
                     </div>
                     <div class="col-md-9">
-                    <h3>{{$post->title}}</h3>
-                    <small>Posted on : {{date('M j, Y',strtotime($post->created_at))}} </small>
-                        
-                        <p >{{substr($post->body,0,rand(200,300))}}<span  class="base-color"> {{strlen($post->body)>300?'read more...':''}} </span></p>
+                   
+                    <small>Posted on : {{$post->created_at}} </small>
+                      <h3>{{$post->title}}</h3>
+                         <p >{{$post->PostBrief()['body']}} <span  class="base-color">{{$post->PostBrief()['more']}}  </span></p> 
 
                     </div>
                    
                 </div>
                 @endforeach
                 <hr>
-                
+                 
             </div>
 
             <div class="col-md-3 col-md-offset-1  text-center">
@@ -52,3 +52,4 @@
     </div>
 @endsection
        
+

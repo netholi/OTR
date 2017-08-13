@@ -14,8 +14,12 @@ class PostsController extends Controller
      */
     public function index()
     {
-        //
+        //Get all post with the latest post first and trucnkated by 300 char
+        $posts=Post::PostIndex()->get();
+        //dd($posts);
+        return view('posts.index')->with('posts',$posts);
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -46,6 +50,8 @@ class PostsController extends Controller
         $post->slug=$request->input('slug');
         $post->body=$request->input('body');
         $post->save();
+
+        return redirect('/posts');
     }
 
     /**
@@ -67,7 +73,9 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post=post::find($id);
+        
+        return view('posts.edit')->withPost($post);
     }
 
     /**
@@ -79,7 +87,19 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request,[
+            'title'=>'required',
+            'slug'=>'required',
+            'body'=>'required'
+        ]);
+
+        $post=Post::find($id);
+        $post->title=$request->input('title');
+        $post->slug=$request->input('slug');
+        $post->body=$request->input('body');
+        $post->save();
+
+        return redirect('/posts');
     }
 
     /**

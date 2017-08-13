@@ -8,7 +8,7 @@ class PagesController extends Controller
 {
     public function index()
     {
-        $posts=Post::orderBy('created_at','desc')->get();
+        $posts=Post::LastThree()->get();
         //dd($posts);
         return view('pages.index')->with('posts',$posts);
     }

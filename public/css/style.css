@@ -34,3 +34,11 @@ hr{
 .m-top-5{
 margin-top: 5px;
 }
+
+.postTextarea{
+   rows:20;
+}
+
+a {
+    color:#20B2AA;
+}
