@@ -1,44 +1,44 @@
-.jumbotron{
-    
-    background: #20B2AA;
-    color: #fff;
-   
-}
+    .jumbotron {
+        background: #20B2AA;
+        color: #fff;
+    }
 
-h3{
-    margin:0px;
-    padding: 0px;
-    color: #20B2AA;
-}
+    h3 {
+        margin: 0px;
+        padding: 0px;
+        color: #20B2AA;
+    }
 
-.fot-mar{
-    margin-top:60px;
-}
-.v-line{
-    border-left: 1px solid #20B2AA;
-}
-.base-color{
-    color:#20B2AA;
-}
-.btn-base-color{
-    background-color: #20B2AA;
-    border-color:#20B2AA;
-    
-}
+    .fot-mar {
+        margin-top: 60px;
+    }
 
-hr{
-     border-color:#20B2AA;
-     
-}
+    .v-line {
+        border-left: 1px solid #20B2AA;
+    }
 
-.m-top-5{
-margin-top: 5px;
-}
+    .base-color {
+        color: #20B2AA;
+    }
 
-.postTextarea{
-   rows:20;
-}
+    .btn-base-color {
+        background-color: #20B2AA;
+        border-color: #20B2AA;
+    }
 
-a {
-    color:#20B2AA;
-}
+    hr {
+        border-color: #20B2AA;
+    }
+
+    .m-top-5 {
+        margin-top: 5px;
+    }
+
+    .m-top-40 {
+    margin-top: 40px;
+    border: 1px solid #20B2AA;
+    }
+
+    a {
+        color: #20B2AA;
+    }

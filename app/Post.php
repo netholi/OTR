@@ -13,6 +13,10 @@ class Post extends Model
         return date ('M j, Y h:s a',strtotime($value));
     }
 
+    public function getUpdatedatAttribute($value){
+        return date ('M j, Y h:s a',strtotime($value));
+    }
+
     //scope
     public function scopeLastThree($query){
         return $query->orderBy('created_at','desc')->take(3);
@@ -28,21 +32,8 @@ class Post extends Model
       $post['body']=substr($this->body,0,rand(200,300)) ;
       $post['more']=strlen($this->body)>300?'read more...':'' ;
      
-        //   $pp=substr($this->body,0,rand(200,300)) ;
-        //  $t1 = ' <span  class="base-color">' ;
-        //  $t2= strlen($this->body)>300?'read more...':'' ;
-        //  $t3=  ' </span>' ;
-        
-        //  $pp = $pp.$t1.$t2.$t3;
-
-        //echo  $pp; 
-        //dd($post);
-        return $post;
-
-       /*   $pp = (substr($this->body,0,rand(200,300)) .  strlen($this->body)>300?'read more...':'' );
-        return $pp; */
+      return $post;
+       
     }
 }
 
-//' <span  class="base-color">'
-//. ' </span>';
